@@ -17,15 +17,18 @@ export default function index() {
           <Text style={estilos.tituloApp}>Dá Hora Filmes </Text>
         </View>
         <View style={estilos.viewBotoes}>
-          <Pressable style={estilos.botaoInicial}>
-            <Ionicons name="search" size={18} color="white" />
-
-            <Text style={estilos.textoBotao}> Buscar Filmes</Text>
-          </Pressable>
-          <Pressable style={estilos.botaoInicial}>
-            <Ionicons name="star" size={18} color="gold" />
-            <Text style={estilos.textoBotao}> Favoritos</Text>
-          </Pressable>
+          <Link href="/buscar" asChild>
+            <Pressable style={estilos.botaoInicial}>
+              <Ionicons name="search" size={18} color="white" />
+              <Text style={estilos.textoBotao}> Buscar Filmes</Text>
+            </Pressable>
+          </Link>
+          <Link href="/favoritos" asChild>
+            <Pressable style={estilos.botaoInicial}>
+              <Ionicons name="star" size={18} color="gold" />
+              <Text style={estilos.textoBotao}> Favoritos</Text>
+            </Pressable>
+          </Link>
         </View>
         <View style={estilos.viewRodape}>
           <Link href="/privacidade" asChild>
@@ -35,10 +38,12 @@ export default function index() {
             </Pressable>
           </Link>
 
-          <Pressable style={estilos.botaoRodape}>
-            <Ionicons name="information-circle" size={18} color="white" />
-            <Text style={estilos.textoBotao}> Sobre</Text>
-          </Pressable>
+          <Link href="/sobre" asChild>
+            <Pressable style={estilos.botaoRodape}>
+              <Ionicons name="information-circle" size={18} color="white" />
+              <Text style={estilos.textoBotao}> Sobre</Text>
+            </Pressable>
+          </Link>
         </View>
       </SafeAreaView>
     </>
