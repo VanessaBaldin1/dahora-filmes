@@ -1,5 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Stack } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { View, Text, Image, Pressable, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -19,6 +19,7 @@ export default function index() {
         <View style={estilos.viewBotoes}>
           <Pressable style={estilos.botaoInicial}>
             <Ionicons name="search" size={18} color="white" />
+
             <Text style={estilos.textoBotao}> Buscar Filmes</Text>
           </Pressable>
           <Pressable style={estilos.botaoInicial}>
@@ -27,10 +28,13 @@ export default function index() {
           </Pressable>
         </View>
         <View style={estilos.viewRodape}>
-          <Pressable style={estilos.botaoRodape}>
-            <Ionicons name="lock-closed" size={18} color="white" />
-            <Text style={estilos.textoBotao}> Privacidade</Text>
-          </Pressable>
+          <Link href="/privacidade" asChild>
+            <Pressable style={estilos.botaoRodape}>
+              <Ionicons name="lock-closed" size={18} color="white" />
+              <Text style={estilos.textoBotao}> Privacidade</Text>
+            </Pressable>
+          </Link>
+
           <Pressable style={estilos.botaoRodape}>
             <Ionicons name="information-circle" size={18} color="white" />
             <Text style={estilos.textoBotao}> Sobre</Text>
