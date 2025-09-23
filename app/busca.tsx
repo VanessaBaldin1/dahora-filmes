@@ -21,7 +21,7 @@ export default function Busca() {
 
   const buscarFilmes = () => {
     if (!filme) {
-      Vibration.vibrate(3000);
+      Vibration.vibrate();
       return Alert.alert("Ops!", "Você deve digitar o filme");
     }
   };
