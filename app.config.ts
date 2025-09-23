@@ -32,6 +32,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   plugins: ["expo-font", "expo-asset", "expo-router"],
   //Acessando a API_KEY através do dotenv e guardando na chave apiKEY
   extra: {
-    apikey: process.env.API_KEY,
+    apiKey: process.env.API_KEY,
   },
 });
