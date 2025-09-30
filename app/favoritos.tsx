@@ -83,6 +83,13 @@ export default function Favoritos() {
     }
   };
 
+  const apagarTudo = () => {
+    Alert.alert(
+      "❗Apagar todos os favoritos",
+      "Tem certeza que deseja apagar todos os filmes favoritos?"
+    );
+  };
+
   return (
     <>
       <Stack.Screen
@@ -90,7 +97,7 @@ export default function Favoritos() {
           headerTitle: "Meus Favoritos",
           headerRight: () =>
             favoritos.length > 0 && (
-              <Pressable>
+              <Pressable onPress={apagarTudo}>
                 <Ionicons name="trash" size={24} color="#fff" />
               </Pressable>
             ),
