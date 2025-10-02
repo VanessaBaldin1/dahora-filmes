@@ -3,7 +3,7 @@ import Loading from "@/src/components/Loading";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { Stack } from "expo-router";
-import { StatusBar } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 export default function Layout() {
   const [fonteCarregada] = useFonts({
@@ -16,7 +16,7 @@ export default function Layout() {
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle="default" backgroundColor="#5451a6" />
+      <StatusBar style="light" />
 
       <Stack
         screenOptions={{
