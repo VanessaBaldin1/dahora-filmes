@@ -29,6 +29,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: "#ffffff",
     },
     edgeToEdgeEnabled: true,
+    package: "com.vanessabaldin.dahorafilmes",
   },
   plugins: ["expo-font", "expo-asset", "expo-router"],
   //Acessando a API_KEY através do dotenv e guardando na chave apiKEY
